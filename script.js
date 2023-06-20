@@ -30,22 +30,12 @@ function playRound(playerSelection, computerSelection) {
 }
 
 function game() {
-    for (let i = 1; i <= 5; i++) {
+    while (playerScore < 5 && computerScore < 5){
         let playerSelection = prompt("Rock, paper, scissors!");
         playerSelection = playerSelection.toUpperCase();
         let computerSelection = getComputerChoice();
         playRound(playerSelection, computerSelection);
     }
 
-    if (playerScore === computerScore) {
-        playerScore = 0;
-        computerScore = 0
-        return alert("This game is a DRAW!")
-    } else if (playerScore > computerScore) {
-        return alert("Congratulations! You win this game!")
-
-    } else if (playerScore < computerScore) {
-        return alert("Game OVER! Better luck next time")
-    }
-
+    playerScore < computerScore ? alert("Game OVER! Better luck next time") : alert("Congratulations! You win this game!");
 }
