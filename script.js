@@ -1,4 +1,5 @@
-
+let playerScore = 0
+let computerScore = 0
 function getComputerChoice() {
     let computerChoice
     let random = Math.floor(Math.random() * 3);
@@ -16,15 +17,20 @@ function getComputerChoice() {
 }
 
 function playRound(playerSelection, computerSelection) {
-    computerSelection = getComputerChoice();
-    playerSelection = prompt("Choose your weapon").toUpperCase();
-
+    
     if (playerSelection === computerSelection) {
-        return alert("It's a tie!")
+        return "It's a tie!"
     } else if ((playerSelection === "SCISSORS" && computerSelection === "PAPER") || (playerSelection === "PAPER" && computerSelection === "ROCK") || (playerSelection === "ROCK" && computerSelection === "SCISSORS")) {
-        return alert("You win!")
+        playerScore++ ;
+        return "You win! Player score: " + playerScore + " and Computer Score: " + computerScore
     } else if ((playerSelection === "SCISSORS" && computerSelection === "ROCK") || (playerSelection === "PAPER" && computerSelection === "SCISSORS") || (playerSelection === "ROCK" && computerSelection === "PAPER")) {
-        return alert("You lose")
+        computerScore++;
+        return "You lose! Player score: " + playerScore + " and Computer Score: " + computerScore
     }
 }
 
+function game() {
+    
+
+
+}
