@@ -12,7 +12,19 @@ function getComputerChoice() {
             computerChoice = "SCISSORS";  
     }
 
-    console.log(computerChoice)
-
-    return computerChoice
+    return computerChoice;
 }
+
+function playRound(playerSelection, computerSelection) {
+    computerSelection = getComputerChoice();
+    playerSelection = prompt("Choose your weapon").toUpperCase();
+
+    if (playerSelection === computerSelection) {
+        return alert("It's a tie!")
+    } else if ((playerSelection === "SCISSORS" && computerSelection === "PAPER") || (playerSelection === "PAPER" && computerSelection === "ROCK") || (playerSelection === "ROCK" && computerSelection === "SCISSORS")) {
+        return alert("You win!")
+    } else if ((playerSelection === "SCISSORS" && computerSelection === "ROCK") || (playerSelection === "PAPER" && computerSelection === "SCISSORS") || (playerSelection === "ROCK" && computerSelection === "PAPER")) {
+        return alert("You lose")
+    }
+}
+
