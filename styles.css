@@ -39,6 +39,7 @@ div.select {
     display: flex;
     justify-content: space-evenly;
     margin: 100px;
+    margin-bottom: 60px;
 }
 
 div.button {
