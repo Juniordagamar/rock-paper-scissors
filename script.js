@@ -48,4 +48,15 @@ function playRound(playerSelection, computerSelection) {
         displayResult("You lose!")
     }
 }
+
+function displayResults(str) {
+    message.animate([{ opacity: 0 }, { opacity: 1 }], {
+      duration: 300,
+      fill: "forwards",
+      iterations: 1,
+      delay: 0,
+      easing: "ease-out",
+    });
+    message.textContent = str;
+}
   
