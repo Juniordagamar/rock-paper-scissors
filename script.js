@@ -12,6 +12,10 @@ buttons.forEach(button => button.addEventListener("click", (event) => {
 
     playRound(playerSelection, computerSelection);
     updateScores();
+
+    if (playerScore === 5 || computerScore === 5) {
+        endGame()
+    }
 }))
 
 function getComputerChoice() {
@@ -38,4 +42,15 @@ function updateScores() {
 
 function displayResult(str) {
     message.innerHTML = str;
+}
+
+function endGame() {
+    if (playerScore > computerScore) {
+        window.alert(`You won the game! CONGRATULATION! \nPlayer: ${playerScore} \nComputer: ${computerScore}`);
+    } else {
+       window.alert(`You lost the game. Better luck next time. \nPlayer: ${playerScore} \nComputer: ${computerScore}`); 
+    }
+    playerScore = 0;
+    computerScore = 0;
+    updateScores();
 }
