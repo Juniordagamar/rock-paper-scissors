@@ -36,4 +36,16 @@ function getComputerChoice(computerChoice) {
     return computerChoice;
 }
 
+function playRound(playerSelection, computerSelection) {
+     
+    if (playerSelection === computerSelection) {
+        displayResult("It's a tie!")
+    } else if ((playerSelection === "SCISSORS" && computerSelection === "PAPER") || (playerSelection === "PAPER" && computerSelection === "ROCK") || (playerSelection === "ROCK" && computerSelection === "SCISSORS")) {
+        playerScore++ ;
+        displayResult("You win! Player score: " + playerScore + " and Computer Score: " + computerScore)
+    } else if ((playerSelection === "SCISSORS" && computerSelection === "ROCK") || (playerSelection === "PAPER" && computerSelection === "SCISSORS") || (playerSelection === "ROCK" && computerSelection === "PAPER")) {
+        computerScore++;
+        displayResult("You lose!")
+    }
+}
   
