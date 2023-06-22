@@ -1,6 +1,13 @@
 let playerScore = 0
 let computerScore = 0
 
+const buttons = document.querySelectorAll("button");
+
+buttons.forEach(button => button.addEventListener("click", event => {
+    let playerSelection = button.innerText;
+    console.log(playerSelection)
+}))
+
 
 function getComputerChoice(computerChoice) {
     let random = Math.floor(Math.random() * 3);
@@ -40,10 +47,5 @@ function game() {
     playerScore < computerScore ? "Game OVER! Better luck next time" : "Congratulations! You win this game!";
 };
 
-const button = document.querySelector("button");
 
-button.addEventListener("click", (event) => {
-    let playerSelection = button.innerText;
-    let computerSelection = getComputerChoice();
-    console.log(playRound(playerSelection, computerSelection));
-})
+
