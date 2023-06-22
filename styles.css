@@ -58,8 +58,8 @@ div.score {
     justify-content: space-evenly;
 }
 
-div.player-score,
-div.cpu-score,
+div#player-score,
+div#cpu-score,
 h2.message {
     text-align: center;
     font-size: 48px;

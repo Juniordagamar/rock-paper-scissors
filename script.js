@@ -4,14 +4,12 @@ let playerScore = 0;
 let computerScore = 0;
 
 let buttons = document.querySelectorAll(".button");
-const currentScore  = document.querySelector(".player-score");
-const cpuScore = document.querySelector(".cpu-score");
 const message = document.querySelector("h2");
 
 buttons.forEach((button) => {
     button.addEventListener("click", () => {
       const img = button.querySelector("img");
-      playerSelection = img.alt.toLowerCase();
+      playerSelection = img.alt.toUpperCase();
 
 
       playRound(playerSelection, computerSelection);
@@ -42,10 +40,10 @@ function playRound(playerSelection, computerSelection) {
         displayResult("It's a tie!")
     } else if ((playerSelection === "SCISSORS" && computerSelection === "PAPER") || (playerSelection === "PAPER" && computerSelection === "ROCK") || (playerSelection === "ROCK" && computerSelection === "SCISSORS")) {
         playerScore++ ;
-        displayResult("You win! Player score: " + playerScore + " and Computer Score: " + computerScore)
+        displayResult("You win! Keep it up")
     } else if ((playerSelection === "SCISSORS" && computerSelection === "ROCK") || (playerSelection === "PAPER" && computerSelection === "SCISSORS") || (playerSelection === "ROCK" && computerSelection === "PAPER")) {
         computerScore++;
-        displayResult("You lose!")
+        displayResult("You lose! Try Again")
     }
 }
 
@@ -59,4 +57,32 @@ function displayResults(str) {
     });
     message.textContent = str;
 }
+
+function keepPlayerScore() {
+    let currentScore = document.querySelector("#player-score");
+  
+    currentScore.animate([{ opacity: 0 }, { opacity: 1 }], {
+      duration: 300,
+      fill: "forwards",
+      iterations: 1,
+      delay: 0,
+      easing: "ease-out",
+    });
+  
+    currentScore.textContent = playerScore;
+  };
+
+  function keepCpuScore() {
+    let cpuScore = document.querySelector("#computer-score");
+  
+    cpuScore.animate([{ opacity: 0 }, { opacity: 1 }], {
+      duration: 300,
+      fill: "forwards",
+      iterations: 1,
+      delay: 0,
+      easing: "ease-out",
+    });
+  
+    cpuScore.textContent = computerScore;
+  }
   
