@@ -1,24 +1,10 @@
-let playerSelection;
-let computerSelection;
 let playerScore = 0;
 let computerScore = 0;
 
-let buttons = document.querySelectorAll(".button");
+let buttons = document.querySelectorAll("button");
 const message = document.querySelector("h2");
 
-buttons.forEach((button) => {
-    button.addEventListener("click", event => {
-      const img = button.querySelector("img");
-      playerSelection = img.alt.toUpperCase();
-      computerSelection = getComputerChoice()
 
-      playRound(playerSelection, computerSelection);
-  
-      if (playerScore === 5 || computerScore === 5) {
-        declareWinner();
-      }
-    });
-  });
 
 function getComputerChoice(computerChoice) {
     let random = Math.floor(Math.random() * 3);
@@ -47,42 +33,5 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-function displayResults(str) {
-    message.animate([{ opacity: 0 }, { opacity: 1 }], {
-      duration: 300,
-      fill: "forwards",
-      iterations: 1,
-      delay: 0,
-      easing: "ease-out",
-    });
-    message.textContent = str;
-}
 
-function keepPlayerScore() {
-    let currentScore = document.querySelector("#player-score");
-  
-    currentScore.animate([{ opacity: 0 }, { opacity: 1 }], {
-      duration: 300,
-      fill: "forwards",
-      iterations: 1,
-      delay: 0,
-      easing: "ease-out",
-    });
-  
-    currentScore.textContent = playerScore;
-  };
-
-  function keepCpuScore() {
-    let cpuScore = document.querySelector("#computer-score");
-  
-    cpuScore.animate([{ opacity: 0 }, { opacity: 1 }], {
-      duration: 300,
-      fill: "forwards",
-      iterations: 1,
-      delay: 0,
-      easing: "ease-out",
-    });
-  
-    cpuScore.textContent = computerScore;
-  }
   
