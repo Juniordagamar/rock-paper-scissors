@@ -1,0 +1,22 @@
+@import url(https://fonts.googleapis.com/css?family=Dosis:200,300,regular,500,600,700,800);
+
+* {
+   font-family: Dosis;
+   margin: 0;
+}
+
+body {
+    margin: 0;
+}
+
+header {
+    background-color: #3e4444;
+    text-align: center;
+}
+
+.title {
+    color: #82b74b;
+    padding: 20px;
+    font-weight: 900;
+    font-size: 46px;
+}
