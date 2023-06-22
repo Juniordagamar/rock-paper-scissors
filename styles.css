@@ -59,7 +59,9 @@ div.score {
 }
 
 div.player-score,
-div.cpu-score {
+div.cpu-score,
+h2.message {
+    text-align: center;
     font-size: 48px;
     font-weight: 900;
 }
@@ -70,3 +72,4 @@ div.cpu {
     flex-direction: column;
     justify-content: space-evenly;
 }
+
