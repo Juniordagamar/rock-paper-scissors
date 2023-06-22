@@ -42,8 +42,31 @@ div.select {
     margin-bottom: 60px;
 }
 
-div.button {
-    background-color: white;
+div.button,
+div.score {
     text-align: center;
     font-size: 32px;
+    font-weight: 800;
+}
+
+div.button {
+    background-color: white;
+}
+
+div.score {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+div.player-score,
+div.cpu-score {
+    font-size: 48px;
+    font-weight: 900;
+}
+
+div.player,
+div.cpu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
