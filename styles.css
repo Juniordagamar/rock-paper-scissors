@@ -10,7 +10,8 @@ body {
     background-color: #c1946a;
 }
 
-header {
+header,
+footer {
     background-color: #3e4444;
     text-align: center;
 }
