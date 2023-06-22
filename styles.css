@@ -7,6 +7,7 @@
 
 body {
     margin: 0;
+    background-color: #c1946a;
 }
 
 header {
@@ -18,5 +19,13 @@ header {
     color: #82b74b;
     padding: 20px;
     font-weight: 900;
-    font-size: 46px;
+    font-size: 60px;
+    margin: 0;
+}
+
+h1 {
+    text-align: center;
+    margin: 20px;
+    font-size: 48px;
+    color: #405d27;
 }
