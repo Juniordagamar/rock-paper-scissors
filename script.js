@@ -19,13 +19,13 @@ function getComputerChoice(computerChoice) {
 function playRound(playerSelection, computerSelection) {
      
     if (playerSelection === computerSelection) {
-        return alert("It's a tie!")
+        return "It's a tie!"
     } else if ((playerSelection === "SCISSORS" && computerSelection === "PAPER") || (playerSelection === "PAPER" && computerSelection === "ROCK") || (playerSelection === "ROCK" && computerSelection === "SCISSORS")) {
         playerScore++ ;
-        return alert("You win! Player score: " + playerScore + " and Computer Score: " + computerScore)
+        return "You win! Player score: " + playerScore + " and Computer Score: " + computerScore
     } else if ((playerSelection === "SCISSORS" && computerSelection === "ROCK") || (playerSelection === "PAPER" && computerSelection === "SCISSORS") || (playerSelection === "ROCK" && computerSelection === "PAPER")) {
         computerScore++;
-        return alert("You lose! Player score: " + playerScore + " and Computer Score: " + computerScore)
+        return "You lose! Player score: " + playerScore + " and Computer Score: " + computerScore
     }
 }
 
@@ -37,5 +37,13 @@ function game() {
         playRound(playerSelection, computerSelection);
     }
 
-    playerScore < computerScore ? alert("Game OVER! Better luck next time") : alert("Congratulations! You win this game!");
-}
+    playerScore < computerScore ? "Game OVER! Better luck next time" : "Congratulations! You win this game!";
+};
+
+const button = document.querySelector("button");
+
+button.addEventListener("click", (event) => {
+    let playerSelection = button.innerText;
+    let computerSelection = getComputerChoice();
+    console.log(playRound(playerSelection, computerSelection));
+})
