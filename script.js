@@ -7,10 +7,10 @@ let buttons = document.querySelectorAll(".button");
 const message = document.querySelector("h2");
 
 buttons.forEach((button) => {
-    button.addEventListener("click", () => {
+    button.addEventListener("click", event => {
       const img = button.querySelector("img");
       playerSelection = img.alt.toUpperCase();
-
+      computerSelection = getComputerChoice()
 
       playRound(playerSelection, computerSelection);
   

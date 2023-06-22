@@ -30,7 +30,7 @@ h1 {
     color: #405d27;
 }
 
-.button img {
+button img {
     width: 200px;
     height: 200px;
 }
@@ -42,14 +42,14 @@ div.select {
     margin-bottom: 60px;
 }
 
-div.button,
+button,
 div.score {
     text-align: center;
     font-size: 32px;
     font-weight: 800;
 }
 
-div.button {
+button {
     background-color: white;
 }
 
@@ -78,7 +78,7 @@ h2.message {
     margin: 40px;
 }
 
-div.button:hover {
+button:hover {
     cursor: pointer;
     transform: scale(1.1);
     box-shadow: 0 0 20px 1px;
