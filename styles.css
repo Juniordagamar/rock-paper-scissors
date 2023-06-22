@@ -71,5 +71,10 @@ div.cpu {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    gap: 30px;
+}
+
+h2.message {
+    margin: 40px;
 }
 
