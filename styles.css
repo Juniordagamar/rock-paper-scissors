@@ -29,3 +29,20 @@ h1 {
     font-size: 48px;
     color: #405d27;
 }
+
+.button img {
+    width: 200px;
+    height: 200px;
+}
+
+div.select {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 100px;
+}
+
+div.button {
+    background-color: white;
+    text-align: center;
+    font-size: 32px;
+}
