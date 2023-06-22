@@ -2,12 +2,15 @@ let playerScore = 0;
 let computerScore = 0;
 
 let buttons = document.querySelectorAll("button");
+let playerScoreBox = document.querySelector("#player-score");
+let cpuScoreBox = document.querySelector("#cpu-score"); 
 
 buttons.forEach(button => button.addEventListener("click", (event) => {
     let playerSelection = event.target.alt;
     let computerSelection = getComputerChoice();
 
     playRound(playerSelection, computerSelection);
+    updateScores();
 }))
 
 function getComputerChoice() {
@@ -25,4 +28,9 @@ function playRound(player, cpu) {
         computerScore++;
         return "You Lose! Try Again";
     }
+}
+
+function updateScores() {
+    playerScoreBox.innerHTML = playerScore;
+    cpuScoreBox.innerHTML = computerScore;
 }
